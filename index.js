@@ -73,7 +73,8 @@ function removeFromCart(item) {
       //if statement broken
       if (Object.keys(cart[i]) == item) {
         console.log(cart[i])  //prints object
-        delete cart[i].item
+//        var obj = cart[i]
+        delete cart[i][item]
         return cart
       }
       console.log("I shouldn't get here")
