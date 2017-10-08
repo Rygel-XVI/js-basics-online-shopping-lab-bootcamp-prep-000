@@ -71,7 +71,8 @@ function removeFromCart(item) {
     for (var i = 0; i < cartLength; i++) {
 
       if (Object.keys(cart[i]) == item) {
-        delete cart[i][item]
+//        delete cart[i][item]
+        cart.splice(i, 1)
         return cart
       }
     }
