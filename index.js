@@ -70,14 +70,10 @@ function removeFromCart(item) {
     console.log(cartLength)
     for (var i = 0; i < cartLength; i++) {
 
-      //if statement broken
       if (Object.keys(cart[i]) == item) {
-        console.log(cart[i])  //prints object
-//        var obj = cart[i]
         delete cart[i][item]
         return cart
       }
-      console.log("I shouldn't get here")
     }
   } else {
     console.log("That item is not in your cart.")
