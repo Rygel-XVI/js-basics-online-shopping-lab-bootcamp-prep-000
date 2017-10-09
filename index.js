@@ -79,8 +79,10 @@ function placeOrder(cardNumber) {
   //If no argument is received, the function should print out `Sorry, we don't have a credit card on file for you.`
   if (cardNumber == null) {
     console.log("Sorry, we don't have a credit card on file for you.")
+  } else {
+    console.log(`Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`)
   }
-
+  cart = []
   //If a card number is received, the function should print out `Your total cost is $71, which will be charged to the card 83296759.`
   //(where `71` is the value returned by `total()` and `83296759` is the credit card number passed to `placeOrder()`).
   //then it should empty the cart array
