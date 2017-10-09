@@ -64,14 +64,13 @@ function total() {
 }
 
 function removeFromCart(item) {
-  if (Boolean(item.hasOwnProperty)) {
+  if (item.hasOwnProperty) {
     console.log("if loop")
     var cartLength = cart.length
     console.log(cartLength)
     for (var i = 0; i < cartLength; i++) {
 
       if (Object.keys(cart[i]) == item) {
-//        delete cart[i][item]
         cart.splice(i, 1)
         return cart
       }
