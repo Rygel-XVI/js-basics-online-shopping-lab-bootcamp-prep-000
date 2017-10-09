@@ -75,17 +75,16 @@ function removeFromCart(item) {
         return cart
       }
     }
-  } */ 
+  } */
   var cartLength = cart.length
   for (var i = 0; i < cartLength; i++) {
     if (Object.keys(cart[i]) == item) {
       cart.splice(i, 1)
       return cart
-    }
-  }
-    else {
+    } else {
     console.log("That item is not in your cart.")
     return cart
+    }
   }
 }
 
