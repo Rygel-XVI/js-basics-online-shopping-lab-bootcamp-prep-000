@@ -64,7 +64,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  if (item.hasOwnProperty()) {
+/*  if (item.hasOwnProperty()) {
     console.log("if loop")
     var cartLength = cart.length
     console.log(cartLength)
@@ -75,7 +75,15 @@ function removeFromCart(item) {
         return cart
       }
     }
-  } else {
+  } */ 
+  var cartLength = cart.length
+  for (var i = 0; i < cartLength; i++) {
+    if (Object.keys(cart[i]) == item) {
+      cart.splice(i, 1)
+      return cart
+    }
+  }
+    else {
     console.log("That item is not in your cart.")
     return cart
   }
