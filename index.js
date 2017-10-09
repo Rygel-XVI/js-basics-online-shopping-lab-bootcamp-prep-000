@@ -77,7 +77,7 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   //If no argument is received, the function should print out `Sorry, we don't have a credit card on file for you.`
-  if (cardNumber.hasOwnProperty()) {
+  if (cardNumber == null) {
     console.log("Sorry, we don't have a credit card on file for you.")
   }
 
